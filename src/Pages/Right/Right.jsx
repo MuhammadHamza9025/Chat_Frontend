@@ -22,7 +22,7 @@ const Right = () => {
     useEffect(() => {
         const GetConversation = async () => {
             if (id) {
-                const response = await fetch(`http://localhost:1000/get/${id}`, {
+                const response = await fetch(`https://chat-backend-alpha-vert.vercel.app/get/${id}`, {
                     credentials: 'include',
                 });
                 const res = await response.json();
@@ -35,7 +35,7 @@ const Right = () => {
     // Establish socket connection
     useEffect(() => {
         if (authuserId) {
-            const Socket = io('http://localhost:1000', {
+            const Socket = io('https://chat-backend-alpha-vert.vercel.app/', {
                 query: { userId: authuserId },
             });
 
@@ -68,7 +68,7 @@ const Right = () => {
     // Send message
     const handlesend = async () => {
         if (message && socket) {
-            const response = await fetch(`http://localhost:1000/convo/${id}`, {
+            const response = await fetch(`https://chat-backend-alpha-vert.vercel.app/convo/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

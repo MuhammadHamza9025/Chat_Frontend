@@ -8,7 +8,7 @@ const Home = () => {
     const [users, setusers] = useState([])
     const dispatch = useDispatch()
     const getallusers = async () => {
-        const fetchusers = await fetch('http://localhost:1000/getallusers', {
+        const fetchusers = await fetch('https://chat-backend-alpha-vert.vercel.app/getallusers', {
             credentials: 'include'
         })
         const res = await fetchusers.json()
