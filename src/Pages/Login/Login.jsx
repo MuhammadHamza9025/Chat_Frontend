@@ -10,7 +10,7 @@ const Login = () => {
     const hanldesubmit = async () => {
 
         const data = { email, password };
-        const response = await fetch('http://localhost:1000/login', {
+        const response = await fetch('https://chat-backend-alpha-vert.vercel.app/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

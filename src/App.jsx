@@ -61,7 +61,7 @@ const App = () => {
 
   // const Navigate = useNavigate()
   const getusername = async () => {
-    const response = await fetch('http://localhost:1000/getprofile', {
+    const response = await fetch('https://chat-backend-alpha-vert.vercel.app//getprofile', {
       credentials: 'include'
     })
     const res = await response.json()
@@ -80,7 +80,7 @@ const App = () => {
 
   useEffect(() => {
     const getcookie = async () => {
-      const getcoo = await fetch('http://localhost:1000/check-cookie')
+      const getcoo = await fetch('https://chat-backend-alpha-vert.vercel.app//check-cookie')
       const res = await getcoo.json()
       if (res.status == true) {
         getusername()

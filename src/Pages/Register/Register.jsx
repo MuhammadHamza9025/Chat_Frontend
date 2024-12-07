@@ -9,7 +9,7 @@ const Register = () => {
     const navigate = useNavigate()
     const handlesubmit = async () => {
         const data = { name, email, password };
-        await fetch('http://localhost:1000', {
+        await fetch('https://chat-backend-alpha-vert.vercel.app/', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
